@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Ubuntu+Mono&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --light: #ffffffe6;
+  --dark: #002;
+  --blue: #000022;
+  --blue-light: #3023ae;
+  --pink: #ff0099;
+}
+
+body {
+  background-color: var(--blue);
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: var(--light);
+  line-height: 1;
+  margin: 0 0 5.7vw;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.inner-box {
+  height: 23vw;
+  width: 23vw;
+  background: var(--pink);
+  background-image: linear-gradient(
+    45deg,
+    var(--blue-light) 0%,
+    var(--pink) 100%
+  );
+  box-shadow: -10vmin 10vmin #ffffff12;
+}
+
+.box {
+  position: relative;
+}
+
+input {
+  position: absolute;
+  border: none;
+  width: 70px;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 5px 0 5px 10px;
+  background: var(--light);
+  border-radius: 2px;
+}
+
+.top-left {
+  top: 0;
+  left: -71px;
+}
+
+.top-right {
+  top: 0;
+  right: -71px;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: -71px;
+}
+
+.bottom-left {
+  left: -71px;
+  bottom: 0;
+}
+
+.output {
+  display: flex;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.output-code {
+  display: block;
+  color: var(--dark);
+  background: var(--light);
+  padding: 0.5em 0.625em;
+  border-radius: 2px 0 0 2px;
+  margin-bottom: 0;
+  font-family: "Ubuntu Mono", monospace;
+}
+
+.output-button {
+  display: block;
+  border-radius: 2px;
+  background: var(--pink);
+  border: none;
+  color: var(--light);
+  padding: 0.5em 1em;
+  font-weight: 700;
+  transition: background 0.3s ease-out;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  width: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.output-button:hover {
+  background: var(--blue-light);
+}
+
+.output-wrapper {
+  display: flex;
+  margin-left: 20px;
+}
+
+.copied-alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--light);
+  border-radius: 2px;
+  padding: 10px 25px;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: ease-in-out 0.25s opacity;
+}

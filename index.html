@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Border Radius Generator</title>
+</head>
+
+<body>
+
+
+    <section class="container">
+        <h1>border-radius-generator</h1>
+        <div class="box">
+            <input type="number" min="0" name="top-left" value="0" id="top-left" class="top-left">
+            <input type="number" min="0" name="top-right" value="0" id="top-right" class="top-right">
+            <input type="number" min="0" name="bottom-right" value="0" id="bottom-right" class="bottom-right">
+            <input type="number" min="0" name="bottom-left" value="0" id="bottom-left" class="bottom-left">
+            <div class="inner-box" min="0" id="inner-box"></div>
+            <div class="copied-alert" id="copied-alert">
+                Copied to clipboard 👍
+            </div>
+        </div>
+        <div class="output">
+            <span>border-radius:</span>
+            <div class="output-wrapper">
+                <span class="output-code" id="output-code">0px 0px 0px 0px</span>
+                <button class="output-button" id="output-button">copy</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
